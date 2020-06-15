@@ -3,12 +3,12 @@
 //добавь метод getInfo(), который выводит в консоль значения полей
 // login и email объекта который его вызвал.
 
-const Account = function (login, email) {
+const Account = function ({login, email}) {
   this.login = login;
   this.email = email;
 };
 Account.prototype.getInfo = function () {
-  console.log(this.login);
+  console.log(`Login: ${this.login}, Email: ${this.email}`);
 };
 console.log(Account.prototype.getInfo); // function
 
